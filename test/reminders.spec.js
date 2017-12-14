@@ -14,11 +14,12 @@ describe ('Reminders', () => {
         let wrapper = mount(Reminders);
         let newReminder = wrapper.find('.new-reminder');
 
-        newReminder.element.value = 'Study some algorithms  ';
+        newReminder.element.value = 'Study some algorithms';
         newReminder.trigger('input');
 
-        wrapper.find('button'.trigger('click'));
-        expect(wrapper.find('ul').text()).toContain('Go to the store');
+        wrapper.find('button').trigger('click');
+
+        expect(wrapper.find('ul').text()).toContain('Study some algorithms');
     });
 
 });

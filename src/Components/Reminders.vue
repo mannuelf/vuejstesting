@@ -1,6 +1,6 @@
 <template>
   <div>
-      <input type="text" class="new-reminder">
+      <input type="text" class="new-reminder" v-model="newReminder">
       <button @click="add">Add Reminder</button>
 
       <ul v-if="reminders.length">
@@ -20,7 +20,8 @@
 
         methods: {
             add () {
-                this.reminders.push(newReminder);
+                this.reminders.push(this.newReminder);
+                this.newReminder = '';
             }
         }
     }
