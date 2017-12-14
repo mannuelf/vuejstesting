@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "mocha-webpack --wepack-config webpack.config.js"
+    "test": "mocha-webpack --wepack-config webpack.config.js test/*.spec.js"
   },
   "repository": "git@github.com:mannuelf/vuejstesting.git",
   "author": "mannuelf <mannuel.ferreira@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "mocha": "^4.0.1",
     "mocha-webpack": "^1.0.1",
-    "vue-test-utils": "^1.0.0-beta.7"
+    "vue-test-utils": "^1.0.0-beta.7",
+    "vuejs": "^2.0.18",
+    "webpack": "^3.10.0"
   }
 }
