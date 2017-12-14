@@ -22,11 +22,15 @@ describe ('Counter', () => {
     });
 
     it ('decrements the count the decrement button is clicked', () => {
-        expect(wrapper.vm.count).toBe(0);
-        wrapper.find('.increment').trigger('click'); // 1
-        wrapper.find('.increment').trigger('click'); // 2
+        // wrapper.find('.increment').trigger('click'); // 1
+        // wrapper.find('.increment').trigger('click'); // 2
+        wrapper.setData({
+            count: 5
+        });
+
         wrapper.find('.decrement').trigger('click'); // 3
-        expect(wrapper.vm.count).toBe(1);
+
+        expect(wrapper.vm.count).toBe(4);
     });
 
     it ('presents the current count', () => {
