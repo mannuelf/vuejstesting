@@ -36,7 +36,8 @@ describe ('Counter', () => {
     it ('never goes below 0', () => {
         expect(wrapper.vm.count).toBe(0);
         expect(wrapper.find('.decrement').hasStyle('display', 'none')).toBe(true);
-        wrapper.find('.increment').trigger('click'); // 1
+        // wrapper.find('.increment').trigger('click'); // 1 or can do...
+        wrapper.setData({ count: 1 });
         expect(wrapper.find('.decrement').hasStyle('display', 'none')).toBe(false);
     });
 
