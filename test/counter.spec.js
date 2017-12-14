@@ -9,5 +9,6 @@ describe ('Counter', () => {
 
         wrapper.vm.count // access the data properties on the vm
     });
+    
 
 });
