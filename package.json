@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "mocha-webpack --wepack-config webpack.config.js test/*.spec.js"
+    "test": "mocha-webpack --webpack-config webpack.config.js test/*.spec.js"
   },
   "repository": "git@github.com:mannuelf/vuejstesting.git",
   "author": "mannuelf <mannuel.ferreira@gmail.com>",
