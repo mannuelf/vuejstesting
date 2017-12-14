@@ -3,7 +3,7 @@
         <span class="count" v-text="count"></span> 
         <button @click="count++" class="increment">Increment</button>
         <!-- only reduce the count if great than 0 -->
-        <button @click="count > 0 && count--" class="decrement">Increment</button>
+        <button @click="count > 0 && count--" class="decrement" v-show="count > 0">Increment</button>
     </div>
 </template>
 
