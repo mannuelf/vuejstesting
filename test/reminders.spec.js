@@ -3,7 +3,7 @@ import expects from 'expect';
 
 describe ('Reminders', () => {
     
-    it.only ('hides the reminders list if there are none', () => {
+    it ('hides the reminders list if there are none', () => {
         let wrapper = mount(Reminders);
 
         expect(wrapper.contains('ul')).toBe(false);
