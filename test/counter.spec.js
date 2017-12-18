@@ -24,6 +24,8 @@ describe ('Counter', () => {
     it ('decrements the count the decrement button is clicked', () => {
         // wrapper.find('.increment').trigger('click'); // 1
         // wrapper.find('.increment').trigger('click'); // 2
+
+        // heres what i want the data on the vue model to be, instead of above lines ^
         wrapper.setData({
             count: 5
         });
@@ -38,6 +40,7 @@ describe ('Counter', () => {
         expect(wrapper.find('.decrement').hasStyle('display', 'none')).toBe(true);
         // wrapper.find('.increment').trigger('click'); // 1 or can do...
         wrapper.setData({ count: 1 });
+        // i assert false that i see a display: none
         expect(wrapper.find('.decrement').hasStyle('display', 'none')).toBe(false);
     });
 
