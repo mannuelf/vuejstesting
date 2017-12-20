@@ -2,7 +2,7 @@ import { mount } from 'vue-test-utils';
 import expects from 'expect';
 
 describe ('Reminders', () => {
-    
+    // describe the entire flow, think about how do reminders work
     it ('hides the reminders list if there are none', () => {
         let wrapper = mount(Reminders);
 
