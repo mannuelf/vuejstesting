@@ -35,12 +35,14 @@ describe ('Counter', () => {
         expect(wrapper.vm.count).toBe(4);
     });
 
-    it.only ("never goes below 0", () => {
+    it ("never goes below 0", () => {
          expect(wrapper.vm.count).toBe(0);
-
-         wrapper.find('.decrement').trigger('click');
-
-         expect(wrapper.vm.count).toBe(0);
+        //  wrapper.find('.decrement').trigger('click');
+        // wrapper.setData({ count: 0 });
+        expect(wrapper.find('.decrement').hasStyle('display', 'none')).toBe(true);
+        //  wrapper.find('.increment').trigger('click');
+        wrapper.setData({ count: -10 });
+        expect(wrapper.find('.increment').hasStyle('display', 'none')).toBe(false);
     });
 
     it ('never goes below 0', () => {
